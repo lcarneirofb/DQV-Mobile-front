@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DQV-Front</string>
+    <string name="txt_usuario">Usuário</string>
+    <string name="txt_senha">Senha</string>
+    <string name="btn_login">Entrar</string>
+    <string name="cnt_desc_DQV_LOGO">Logo Departamento de Qualidade de Vida</string>
+
+    <!-- Tela de menu-->
+    <string name="txt_noticias">Notícias e Campanhas</string>
+    <string name="txt_consultas">Últimas Consultas</string>
+    <string name="txt_prescricoes">Receitas e Prescrições</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DQV-Front</string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="txt_senha">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="cnt_desc_DQV_LOGO">Logotipo del Departamento de Calidad de Vida</string>
+
+    <!-- Tela de menu-->
+    <string name="txt_noticias">Noticias y consejos</string>
+    <string name="txt_consultas">Últimos nombramientos</string>
+    <string name="txt_prescricoes">Recetas médicas</string>
+
+
+</resources>
