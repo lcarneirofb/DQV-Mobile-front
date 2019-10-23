@@ -2,6 +2,7 @@ package com.example.dqv_front
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dqv.R
 
 
 class MenuActivity : AppCompatActivity() {
@@ -11,5 +12,6 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
     }
+
 
 }
