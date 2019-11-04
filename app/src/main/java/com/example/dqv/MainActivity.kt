@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import com.example.dqv.services.DQV
 import com.example.dqv.services.ServiceBuilder
 import com.example.dqv_front.MenuActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Retrofit
+import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,9 +38,17 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-            //implementar Login
+            //começo login
 
-            //ServiceBuilder.retrofit.autenticateUser()
+            val callService = Retrofit.Builder()
+                .build()
+
+            val dqvCaller = callService.create<DQV>()
+
+            dqvCaller.authenticateUser(user,pass)
+
+
+            //fim login
 
             val message: String = "User" + user + "logged in with password " + pass
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

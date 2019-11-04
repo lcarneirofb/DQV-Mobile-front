@@ -10,9 +10,13 @@ interface DQV {
 
     @FormUrlEncoded
     @POST("pessoa/login")
-    fun autenticateUser(
+    fun authenticateUser(
         @Field("email") user:String,
         @Field("pass") pass:String
     )
+
+
+
+
 
 }
