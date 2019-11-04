@@ -9,7 +9,7 @@ import retrofit2.http.POST
 interface DQV {
 
     @FormUrlEncoded
-    @POST("pessoa")
+    @POST("pessoa/login")
     fun autenticateUser(
         @Field("email") user:String,
         @Field("pass") pass:String

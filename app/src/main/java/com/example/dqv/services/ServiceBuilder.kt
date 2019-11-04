@@ -5,7 +5,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceBuilder {
-    //Switch to the actual backend URL
     private const val URL = "http://34.67.51.16:5080/dqv"
     private val okHttpClient = OkHttpClient.Builder()
     private val builder = Retrofit.Builder().baseUrl(URL)

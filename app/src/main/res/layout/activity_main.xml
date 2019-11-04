@@ -20,42 +20,45 @@
         app:layout_constraintVertical_bias="0.157">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inpt_usuario"
+            android:id="@+id/lyt_inpt_usuario"
             android:layout_width="208dp"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="136dp"
             app:boxBackgroundColor="#6597A8A4"
             app:boxBackgroundMode="outline"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.338"
-            app:layout_constraintStart_toEndOf="@+id/txt_usuario">
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toEndOf="@+id/txt_usuario"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpt_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inpt_senha"
-            android:layout_width="209dp"
-            android:layout_height="57dp"
+            android:id="@+id/lyt_inpt_senha"
+            android:layout_width="207dp"
+            android:layout_height="55dp"
             app:boxBackgroundColor="#6597A8A4"
             app:boxBackgroundMode="outline"
             app:boxStrokeColor="#00FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintHorizontal_bias="0.42"
             app:layout_constraintStart_toEndOf="@+id/txt_senha"
-            app:layout_constraintTop_toBottomOf="@+id/inpt_usuario"
-            app:layout_constraintVertical_bias="0.253"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_inpt_usuario"
+            app:layout_constraintVertical_bias="0.291"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="#070000"
             app:passwordToggleTintMode="src_in">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/inpt_senha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -66,14 +69,13 @@
 
         <TextView
             android:id="@+id/txt_senha"
-            android:layout_width="61dp"
-            android:layout_height="21dp"
-            android:layout_marginBottom="72dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/txt_senha"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_usuario" />
 
@@ -81,12 +83,11 @@
             android:id="@+id/txt_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
             android:text="@string/txt_usuario"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/txt_senha"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintHorizontal_bias="0.092"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

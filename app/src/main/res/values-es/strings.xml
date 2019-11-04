@@ -10,6 +10,11 @@
     <string name="txt_noticias">Noticias y consejos</string>
     <string name="txt_consultas">Últimos nombramientos</string>
     <string name="txt_prescricoes">Recetas médicas</string>
+    <string name="title_activity_menu">Menú principal</string>
+
+    <!-- Advertencias -->
+    <string name="loginWarning">Por favor, escriba un usuario</string>
+    <string name="senhaWarning">Por favor, escriba la contraseña</string>
 
 
 </resources>

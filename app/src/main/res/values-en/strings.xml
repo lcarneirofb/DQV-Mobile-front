@@ -10,5 +10,10 @@
     <string name="txt_noticias">News and Tips</string>
     <string name="txt_consultas">Latests Appointments</string>
     <string name="txt_prescricoes">Medical Prescriptions</string>
+    <string name="title_activity_menu">Main Menu</string>
+
+    <!-- Warnings -->
+    <string name="loginWarning">Please, type an user</string>
+    <string name="senhaWarning">Please, type the password</string>
 
 </resources>

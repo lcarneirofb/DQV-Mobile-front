@@ -9,10 +9,11 @@
     <string name="txt_noticias">Notícias e Campanhas</string>
     <string name="txt_consultas">Últimas Consultas</string>
     <string name="txt_prescricoes">Receitas e Prescrições</string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">Menu Principal</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Alertas -->
+    <string name="loginWarning">Por favor, digite um usuário</string>
+    <string name="senhaWarning">Por favor, digite a senha</string>
 
 
 </resources>
