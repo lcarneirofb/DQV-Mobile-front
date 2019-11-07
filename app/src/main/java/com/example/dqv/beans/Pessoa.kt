@@ -1,5 +1,6 @@
 package com.example.dqv.beans
 
+import java.sql.Time
 import java.sql.Timestamp
 
 class Pessoa {
@@ -19,7 +20,10 @@ class Pessoa {
     var coordenador: Boolean? = null
     var endereco: Endereco? = null
 
-    constructor(id: Int, email: String, pass: String, nome:String, rg: String, cpf: String, telefone: String, sexo: Sexo, estadoCivil: EstadoCivil, dataNascimento: Timestamp, endereco: Endereco){
+    constructor(id: Int, email: String, pass: String, nome:String, rg: String, cpf: String, telefone: String,
+                sexo: Sexo, estadoCivil: EstadoCivil, dataNascimento: Timestamp,
+                dataInicio: Timestamp, dataFim: Timestamp, coordenador: Boolean,
+                endereco: Endereco){
         this.id = id
         this.email = email
         this.pass = pass
@@ -30,6 +34,9 @@ class Pessoa {
         this.sexo = sexo
         this.estadoCivil = estadoCivil
         this.dataNascimento = dataNascimento
+        this.dataInicio = dataInicio
+        this.dataFim = dataFim
+        this.coordenador = coordenador
         this.endereco = endereco
     }
 

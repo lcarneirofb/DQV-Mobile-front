@@ -1,5 +1,6 @@
 package com.example.dqv.services
 
+import com.example.dqv.services.models.LoginResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -13,7 +14,7 @@ interface DQV {
     fun authenticateUser(
         @Field("email") user:String,
         @Field("pass") pass:String
-    )
+    ):Call<LoginResponse>
 
 
 
