@@ -42,6 +42,8 @@ class SharedPrefManager {
         pessoa.estadoCivil?.let {}
         pessoa.coordenador?.let { editor.putBoolean("coordenador",it) }
 
+        editor.apply()
+
 
     }
 }

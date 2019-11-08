@@ -56,7 +56,16 @@ class MainActivity : AppCompatActivity() {
                         call: Call<LoginResponse>,
                         response: Response<LoginResponse>
                     ) {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                        if(response.body()?.id==null){
+                            Toast.makeText(applicationContext, R.string.userNotFound, Toast.LENGTH_SHORT).show()
+                            return
+                        }else{
+                            val message: String = "User" + user + "logged in with password " + pass
+                            Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+
+                            val intent = Intent(applicationContext, MenuActivity::class.java)
+                            startActivity(intent)
+                        }
                     }
 
                 })
@@ -64,16 +73,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
             //fim login
 
-            val message: String = "User" + user + "logged in with password " + pass
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
         }
     }
 
