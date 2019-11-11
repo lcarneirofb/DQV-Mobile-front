@@ -14,6 +14,7 @@
     <!-- Alertas -->
     <string name="loginWarning">Por favor, digite um usuário</string>
     <string name="senhaWarning">Por favor, digite a senha</string>
+    <string name="userNotFound">Usuário não encontrado, por favor, tente novamente!</string>
 
 
 </resources>

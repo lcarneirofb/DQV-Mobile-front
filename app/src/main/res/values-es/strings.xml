@@ -15,6 +15,7 @@
     <!-- Advertencias -->
     <string name="loginWarning">Por favor, escriba un usuario</string>
     <string name="senhaWarning">Por favor, escriba la contraseña</string>
+    <string name="userNotFound">Usuário não encontrado, por favor, tente novamente!</string>
 
 
 </resources>

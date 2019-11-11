@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
             //começo login
 
-            var pessoa2: Pessoa? = null
             var login: Login = Login(user,pass)
 
             RetrofitInitializer()
@@ -54,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                     response?.body()?.let {
                         val pessoa: Pessoa = it
 
-                        pessoa2 = pessoa
                         println(pessoa.nome)
                         println(pessoa?.endereco?.logradouro)
 
@@ -78,11 +76,7 @@ class MainActivity : AppCompatActivity() {
 
             //fim consultas
 
-            val message: String = "User" + user + "logged in with password " + pass
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
         }
     }
 
