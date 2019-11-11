@@ -3,14 +3,14 @@ package com.example.dqv.beans
 class Endereco {
 
 
-    var id: Integer? = null
+    var id: Int? = null
     var cep: String? = null
     var logradouro: String? = null
-    var numero: Integer? = null
+    var numero:Int? = null
     var cidade: String? = null
     var uf: String? = null
 
-    constructor(id: Integer, cep: String, logradouro: String, numero: Integer, cidade: String, uf: String){
+    constructor( id: Int, cep: String, logradouro: String, numero:Int , cidade: String, uf: String){
         this.id = id
         this.cep = cep
         this.logradouro = logradouro

@@ -5,16 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import com.example.dqv.beans.Pessoa
+import com.example.dqv.API.APICaller
+import com.example.dqv.API.RetrofitInitializer
+import com.example.dqv.beans.*
 import com.example.dqv.services.DQV
 import com.example.dqv.services.ServiceBuilder
 import com.example.dqv.services.models.LoginResponse
 import com.example.dqv_front.MenuActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.*
+import java.sql.Time
+import java.sql.Timestamp
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,33 +44,39 @@ class MainActivity : AppCompatActivity() {
 
             //começo login
 
-            val callService = Retrofit.Builder()
-                .build()
+            var pessoa2: Pessoa? = null
+            var login: Login = Login(user,pass)
 
-            val dqvCaller = callService.create<DQV>()
+            RetrofitInitializer()
+            val call = RetrofitInitializer().loginService().authenticateUser(login)
+            call.enqueue(object: Callback<Pessoa?> {
+                override fun onResponse(call: Call<Pessoa?>, response: Response<Pessoa?>) {
+                    response?.body()?.let {
+                        val pessoa: Pessoa = it
 
-            dqvCaller.authenticateUser(user,pass)
-                .enqueue(object: Callback<LoginResponse>{
-                    override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                        Toast.makeText(applicationContext, "Algo de errado não está certo, estudantes sedentos estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
+                        pessoa2 = pessoa
+                        println(pessoa.nome)
+                        println(pessoa?.endereco?.logradouro)
+
                     }
+                }
 
-                    override fun onResponse(
-                        call: Call<LoginResponse>,
-                        response: Response<LoginResponse>
-                    ) {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                    }
-
-                })
-
-
-
-
-
-
+                override fun onFailure(call: Call<Pessoa?>, t: Throwable) {
+                    Toast.makeText(applicationContext,t?.message, Toast.LENGTH_SHORT).show()
+                    println(t?.message)
+                    Toast.makeText(applicationContext, "Algo de errado não está certo, "+
+                            "estudantes sedentos estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
+                }
+            })
 
             //fim login
+
+
+            //começo consultas
+
+
+
+            //fim consultas
 
             val message: String = "User" + user + "logged in with password " + pass
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

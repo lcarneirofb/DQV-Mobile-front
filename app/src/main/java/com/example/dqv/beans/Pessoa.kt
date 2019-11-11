@@ -5,11 +5,7 @@ import java.sql.Timestamp
 
 class Pessoa {
 
-    var id: Int?
-        get() = this.id
-        set(value) {
-            id = value
-        }
+    var id: Int? = null
     var email: String? = null
     var pass: String? = null
     var nome: String? = null
