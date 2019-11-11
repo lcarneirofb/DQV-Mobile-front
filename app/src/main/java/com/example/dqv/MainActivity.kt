@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             val user: String = inpt_usuario.text.toString()
             val pass: String = inpt_senha.text.toString()
 
-            println(user)
-            println(pass)
+
+            //Verificacoes dos campos de login e senha
             if(user.isNullOrEmpty()){
                 Toast.makeText(this, R.string.loginWarning, Toast.LENGTH_SHORT).show()
                 txt_usuario.requestFocus()
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-            //começo login
+            //começo da operacao de login
 
             var login: Login = Login(user,pass)
 
@@ -53,9 +53,16 @@ class MainActivity : AppCompatActivity() {
                     response?.body()?.let {
                         val pessoa: Pessoa = it
 
+                        if(pessoa.id == null || pessoa.nome == null){
+                            Toast.makeText(applicationContext,R.string.userNotFound, Toast.LENGTH_SHORT).show()
+                            return
+                        }
+
                         println(pessoa.nome)
                         println(pessoa?.endereco?.logradouro)
 
+                        val intent = Intent(applicationContext,MenuActivity::class.java)
+                        startActivity(intent)
                     }
                 }
 
@@ -63,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,t?.message, Toast.LENGTH_SHORT).show()
                     println(t?.message)
                     Toast.makeText(applicationContext, "Algo de errado não está certo, "+
-                            "estudantes sedentos estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
+                            "Estudantes sedentos estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
                 }
             })
 

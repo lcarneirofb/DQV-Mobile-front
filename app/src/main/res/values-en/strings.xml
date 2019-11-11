@@ -15,6 +15,6 @@
     <!-- Warnings -->
     <string name="loginWarning">Please, type an user</string>
     <string name="senhaWarning">Please, type the password</string>
-    <string name="userNotFound">Usuario no encontrado, por favor intente nuevamente</string>
+    <string name="userNotFound">User not found, please try again!</string>
 
 </resources>
