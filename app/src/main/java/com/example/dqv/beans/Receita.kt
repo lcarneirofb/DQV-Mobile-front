@@ -5,14 +5,14 @@ import java.security.Timestamp
 class Receita {
     var id: Int? = null
     var consulta:Consulta? = null
-    var dataEmissao:Timestamp? = null
-    var validade:Timestamp? = null
+    var dataEmissao:String? = null
+    var validade:String? = null
     var posologia:String? = null
     var descrição:String? = null
     var medicamento:String? = null
     var principioAtivo:String? = null
 
-    constructor(id: Int, consulta:Consulta, dataEmissao:Timestamp, validade:Timestamp, posologia:String,
+    constructor(id: Int, consulta:Consulta, dataEmissao:String, validade:String, posologia:String,
                 descrição:String, medicamento:String, principioAtivo:String){
         this.id=id
         this.consulta=consulta

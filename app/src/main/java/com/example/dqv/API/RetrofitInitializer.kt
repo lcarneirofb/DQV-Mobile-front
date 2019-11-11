@@ -16,4 +16,14 @@ class RetrofitInitializer {
     fun loginService () : LoginService{
         return retrofit.create(LoginService::class.java)
     }
+
+    fun agendamentoConsultaService() : AgendamentoConsultaService{
+        return retrofit.create(AgendamentoConsultaService::class.java)
+    }
+
+    fun receitaService() : ReceitaService{
+        return retrofit.create(ReceitaService::class.java)
+    }
+
+
 }

@@ -34,6 +34,8 @@ class ConsultasFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        //getData()
     }
 
     override fun onCreateView(
@@ -95,5 +97,9 @@ class ConsultasFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    fun getData(){
+
     }
 }
