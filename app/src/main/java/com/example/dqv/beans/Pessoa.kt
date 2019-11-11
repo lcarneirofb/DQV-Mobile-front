@@ -3,7 +3,7 @@ package com.example.dqv.beans
 import java.sql.Time
 import java.sql.Timestamp
 
-class Pessoa {
+open class Pessoa {
 
     var id: Int? = null
     var email: String? = null
