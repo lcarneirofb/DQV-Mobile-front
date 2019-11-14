@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,10 +13,10 @@
         android:padding="10dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardVConsultas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cardVConsultas"
-            >
+            app:cardBackgroundColor="#C4ACFACE">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,49 +24,42 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/img_consultTypeIcon"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="40dp"
-                    android:layout_padding="10dp"
-                    />
+                    android:layout_marginEnd="40dp"
+                    android:background="#0057A88E"
+                    android:padding="10dp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/txt_especialidade"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/img_consultTypeIcon"
-                    android:layout_marginRight="40dp"
-                    android:textSize="30sp"
-                    />
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp" />
 
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/txt_nome_medico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="15dp"
-                    android:textSize="30sp"
-                    />
+                    android:layout_marginTop="5dp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/txt_status_consulta"
-                    android:layout_below="@+id/txt_nome_medico"
-                    />
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_nome_medico" />
+
+                <TextView
                     android:id="@+id/txt_data"
-                    android:layout_below="@+id/txt_status_consulta"
-                    android:layout_padding="10dp"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_status_consulta" />
 
 
             </RelativeLayout>
