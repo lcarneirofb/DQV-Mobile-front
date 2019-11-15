@@ -44,7 +44,7 @@ class ConsultasFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        getData()
+        getDataAgendamentos()
     }
 
     override fun onCreateView(
@@ -89,7 +89,7 @@ class ConsultasFragment : Fragment() {
     }
 
 
-    fun getData(){
+    fun getDataAgendamentos(){
         val callAgendamento = RetrofitInitializer().agendamentoConsultaService().getAgendamentosPessoa(1)
         callAgendamento.enqueue(object: Callback<List<AgendamentoConsulta>?> {
             override fun onResponse(call: Call<List<AgendamentoConsulta>?>,

@@ -17,5 +17,14 @@
     <string name="senhaWarning">Por favor, escriba la contraseña</string>
     <string name="userNotFound">Usuario no encontrado, por favor intente nuevamente!</string>
 
+    <!-- Recetas -->
+    <string name="nomeMedico">Médico: </string>
+    <string name="dtEmissao">Emisíon: </string>
+    <string name="dtValidade">Validez: </string>
+    <string name="posologiaRec">Posología: </string>
+    <string name="descricaoRec">Descripcíon: </string>
+    <string name="nomeMedicamento">Medicación: </string>
+    <string name="prinAtivoRec">P. Activo: </string>
+
 
 </resources>

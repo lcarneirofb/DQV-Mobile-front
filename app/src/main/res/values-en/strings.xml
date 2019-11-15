@@ -17,4 +17,13 @@
     <string name="senhaWarning">Please, type the password</string>
     <string name="userNotFound">User not found, please try again!</string>
 
+    <!-- Recipes -->
+    <string name="nomeMedico">Attendant: </string>
+    <string name="dtEmissao">Issue Date: </string>
+    <string name="dtValidade">Validity: </string>
+    <string name="posologiaRec">Posology: </string>
+    <string name="descricaoRec">Description: </string>
+    <string name="nomeMedicamento">Medication: </string>
+    <string name="prinAtivoRec">A. Principle: </string>
+
 </resources>
