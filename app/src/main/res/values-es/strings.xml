@@ -26,5 +26,10 @@
     <string name="nomeMedicamento">Medicación: </string>
     <string name="prinAtivoRec">P. Activo: </string>
 
+    <!-- Usuarios-->
+    <string name="txt_meuperfil">Mi perfil</string>
+    <string name="btn_mudarsenha">Cambia la contraseña</string>
+
+
 
 </resources>

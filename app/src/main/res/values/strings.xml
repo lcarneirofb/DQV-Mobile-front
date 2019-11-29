@@ -26,5 +26,11 @@
     <string name="prinAtivoRec">P. Ativo: </string>
 
 
+    <!-- Usuário-->
+    <string name="txt_meuperfil">Meu perfil</string>
+    <string name="btn_mudarsenha">Alterar senha</string>
+
+
+
 
 </resources>

@@ -26,4 +26,8 @@
     <string name="nomeMedicamento">Medication: </string>
     <string name="prinAtivoRec">A. Principle: </string>
 
+    <!-- Users-->
+    <string name="txt_meuperfil">My profile</string>
+    <string name="btn_mudarsenha">Change password</string>
+
 </resources>
