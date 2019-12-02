@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/txt_meuperfil"
@@ -33,95 +34,196 @@
                 android:src="@drawable/user_icon" />
 
             <TextView
+                android:id="@+id/lbl_nome_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_nomeuser"
+                android:layout_marginStart="10dp"/>
+            <TextView
                 android:id="@+id/txt_nome_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@android:dimen/thumbnail_height"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/lbl_cpf_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_cpfuser"/>
+                    <TextView
+                        android:id="@+id/txt_cpf_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+                    <TextView
+                        android:id="@+id/lbl_telefone_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_telefoneuser" />
+                    <TextView
+                        android:id="@+id/txt_telefone_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+                    <TextView
+                        android:id="@+id/lbl_datansc_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_datanscuser" />
+                    <TextView
+                        android:id="@+id/txt_datansc_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/lbl_rg_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_rguser"/>
+                    <TextView
+                        android:id="@+id/txt_rg_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+                    <TextView
+                        android:id="@+id/lbl_estcivil_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_estciviluser"/>
+                    <TextView
+                        android:id="@+id/txt_estcivil_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+                    <TextView
+                        android:id="@+id/lbl_sexo_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_sexouser" />
+                    <TextView
+                        android:id="@+id/txt_sexo_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/txt_cpf_user"
+                android:id="@+id/lbl_email_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_rg_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_telefone_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_estcivil_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_datansc_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/txt_sexo_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
+                android:text="@string/lbl_emailuser"
+                android:layout_marginStart="10dp"/>
             <TextView
                 android:id="@+id/txt_email_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_marginStart="25dp"/>
 
             <TextView
-                android:id="@+id/txt_end_user"
+                android:id="@+id/lbl_end_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/lbl_enduser"
+                android:padding="10dp"/>
 
-            <TextView
-                android:id="@+id/txt_logradouro_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
-            <TextView
-                android:id="@+id/txt_numeroend_user"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="@android:dimen/thumbnail_height"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+                <TextView
+                    android:id="@+id/lbl_logradouro_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_logradourouser" />
+                <TextView
+                    android:id="@+id/txt_logradouro_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"/>
+                <TextView
+                    android:id="@+id/lbl_cidade_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_cidadeuser" />
+                <TextView
+                    android:id="@+id/txt_cidade_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"/>
+                <TextView
+                    android:id="@+id/lbl_cep_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_cepuser" />
+                <TextView
+                    android:id="@+id/txt_cep_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"/>
 
-            <TextView
-                android:id="@+id/txt_cidade_user"
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/lbl_numeroend_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_numeroenduser" />
+                <TextView
+                    android:id="@+id/txt_numeroend_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"/>
+                <TextView
+                    android:id="@+id/lbl_uf_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_ufuser" />
+                <TextView
+                    android:id="@+id/txt_uf_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"/>
 
-            <TextView
-                android:id="@+id/txt_uf_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/txt_cep_user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+        </LinearLayout>
 
             <Button
                 android:id="@+id/btn_mudarsenha_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_mudarsenha" />
-
 
         </LinearLayout>
     </ScrollView>

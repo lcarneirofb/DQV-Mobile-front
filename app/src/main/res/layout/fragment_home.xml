@@ -28,9 +28,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/txt_noticias"
-                    app:fontFamily="sans-serif-condensed"
-                    android:padding="10dp"/>
+                    app:fontFamily="sans-serif-condensed" />
 
                 <ImageView
                     android:id="@+id/img_noticia_home"

@@ -18,16 +18,36 @@
     <string name="userNotFound">User not found, please try again!</string>
 
     <!-- Recipes -->
-    <string name="nomeMedico">Attendant: </string>
-    <string name="dtEmissao">Issue Date: </string>
-    <string name="dtValidade">Validity: </string>
-    <string name="posologiaRec">Posology: </string>
-    <string name="descricaoRec">Description: </string>
-    <string name="nomeMedicamento">Medication: </string>
-    <string name="prinAtivoRec">A. Principle: </string>
+    <string name="nomeMedico">Attendant : </string>
+    <string name="dtEmissao">Issue Date : </string>
+    <string name="dtValidade">Validity : </string>
+    <string name="posologiaRec">Posology : </string>
+    <string name="descricaoRec">Description : </string>
+    <string name="nomeMedicamento">Medication : </string>
+    <string name="prinAtivoRec">A. Principle : </string>
 
     <!-- Users-->
     <string name="txt_meuperfil">My profile</string>
     <string name="btn_mudarsenha">Change password</string>
+    <string name="lbl_nomeuser">Name</string>
+    <string name="lbl_cpfuser">CPF</string>
+    <string name="lbl_rguser">RG</string>
+    <string name="lbl_telefoneuser">Phone</string>
+    <string name="lbl_estciviluser">Marital Status</string>
+    <string name="lbl_datanscuser">Date of birth</string>
+    <string name="lbl_sexouser">Gender</string>
+    <string name="lbl_emailuser">Email</string>
+    <string name="lbl_enduser">Address</string>
+    <string name="lbl_logradourouser">Street</string>
+    <string name="lbl_numeroenduser">Number</string>
+    <string name="lbl_cidadeuser">City</string>
+    <string name="lbl_ufuser">State</string>
+    <string name="lbl_cepuser">Postal Code</string>
+
+
+    <!-- Appointments-->
+    <string name="statusConsultaC">Status : Confirmed</string>
+    <string name="statusConsultaCan">Status : Canceled</string>
+    <string name="lbl_novaConsulta">New Appointment</string>
 
 </resources>

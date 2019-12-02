@@ -17,20 +17,40 @@
     <string name="userNotFound">Usuário não encontrado, por favor, tente novamente!</string>
 
     <!-- Receitas -->
-    <string name="nomeMedico">Atendente: </string>
-    <string name="dtEmissao">Emissão: </string>
-    <string name="dtValidade">Validade: </string>
-    <string name="posologiaRec">Posologia: </string>
-    <string name="descricaoRec">Descrição: </string>
-    <string name="nomeMedicamento">Medicamento: </string>
-    <string name="prinAtivoRec">P. Ativo: </string>
+    <string name="nomeMedico">Atendente : </string>
+    <string name="dtEmissao">Emissão : </string>
+    <string name="dtValidade">Validade : </string>
+    <string name="posologiaRec">Posologia : </string>
+    <string name="descricaoRec">Descrição : </string>
+    <string name="nomeMedicamento">Medicamento : </string>
+    <string name="prinAtivoRec">P. Ativo : </string>
 
 
     <!-- Usuário-->
     <string name="txt_meuperfil">Meu perfil</string>
     <string name="btn_mudarsenha">Alterar senha</string>
+    <string name="lbl_nomeuser">Nome</string>
+    <string name="lbl_cpfuser">CPF</string>
+    <string name="lbl_rguser">RG</string>
+    <string name="lbl_telefoneuser">Telefone</string>
+    <string name="lbl_estciviluser">Estado Civil</string>
+    <string name="lbl_datanscuser">Data de Nascimento</string>
+    <string name="lbl_sexouser">Sexo</string>
+    <string name="lbl_emailuser">E-mail</string>
+    <string name="lbl_enduser">Endereço</string>
+    <string name="lbl_logradourouser">Logradouro</string>
+    <string name="lbl_numeroenduser">Número</string>
+    <string name="lbl_cidadeuser">Cidade</string>
+    <string name="lbl_ufuser">UF</string>
+    <string name="lbl_cepuser">CEP</string>
 
 
+    <!-- Consulta-->
+    <string name="statusConsultaC">Status : Confirmada</string>
+    <string name="statusConsultaCan">Status : Cancelada</string>
+    <string name="lbl_novaConsulta">Nova Consulta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
 
 
 </resources>

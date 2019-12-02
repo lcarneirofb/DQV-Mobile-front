@@ -18,17 +18,38 @@
     <string name="userNotFound">Usuario no encontrado, por favor intente nuevamente!</string>
 
     <!-- Recetas -->
-    <string name="nomeMedico">Médico: </string>
-    <string name="dtEmissao">Emisíon: </string>
-    <string name="dtValidade">Validez: </string>
-    <string name="posologiaRec">Posología: </string>
-    <string name="descricaoRec">Descripcíon: </string>
-    <string name="nomeMedicamento">Medicación: </string>
-    <string name="prinAtivoRec">P. Activo: </string>
+    <string name="nomeMedico">Médico : </string>
+    <string name="dtEmissao">Emisíon : </string>
+    <string name="dtValidade">Validez : </string>
+    <string name="posologiaRec">Posología : </string>
+    <string name="descricaoRec">Descripcíon : </string>
+    <string name="nomeMedicamento">Medicación : </string>
+    <string name="prinAtivoRec">P. Activo : </string>
 
     <!-- Usuarios-->
     <string name="txt_meuperfil">Mi perfil</string>
     <string name="btn_mudarsenha">Cambia la contraseña</string>
+    <string name="lbl_nomeuser">Nombre</string>
+    <string name="lbl_cpfuser">CPF</string>
+    <string name="lbl_rguser">RG</string>
+    <string name="lbl_telefoneuser">Número de teléfono</string>
+    <string name="lbl_estciviluser">Estado Civil</string>
+    <string name="lbl_datanscuser">Fecha de nacimiento</string>
+    <string name="lbl_sexouser">Género</string>
+    <string name="lbl_emailuser">Correo electrónico</string>
+    <string name="lbl_enduser">Dirección</string>
+    <string name="lbl_logradourouser">Patio</string>
+    <string name="lbl_numeroenduser">Numero</string>
+    <string name="lbl_cidadeuser">Ciudad</string>
+    <string name="lbl_ufuser">Estado</string>
+    <string name="lbl_cepuser">Código postal</string>
+
+
+
+    <!-- Consulta-->
+    <string name="statusConsultaC">Status : Confirmada</string>
+    <string name="statusConsultaCan">Status : Cancelada</string>
+    <string name="lbl_novaConsulta">Nueva Consulta</string>
 
 
 

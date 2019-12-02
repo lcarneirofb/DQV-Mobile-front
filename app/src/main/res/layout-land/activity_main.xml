@@ -57,6 +57,7 @@
             app:layout_constraintStart_toEndOf="@+id/txt_usuario">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpt_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -73,7 +74,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toEndOf="@+id/txt_senha"
-            app:layout_constraintTop_toBottomOf="@+id/inpt_usuario"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_inpt_usuario"
             app:layout_constraintVertical_bias="0.43"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="#070000"

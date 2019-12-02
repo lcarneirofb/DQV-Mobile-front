@@ -50,8 +50,9 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        var layout: View? = inflater.inflate(R.layout.fragment_home, container, false)
+        getDataAgendamentosHome()
+        return layout
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -117,9 +118,11 @@ class HomeFragment : Fragment() {
                     val agendamentos: List<AgendamentoConsulta> = it
                     for(i in agendamentos) {
                         txt_especialidade_home.text = i.consulta?.especialista?.especialidade?.name
-                        txt_nome_medico_home.text = "Atendente:" + i.consulta?.especialista?.nome
+                        txt_nome_medico_home.text = resources.getString(R.string.nomeMedico) + i.consulta?.especialista?.nome
                         if(i.consulta?.status == true){
-                            txt_status_consulta_home.text = "Status: Confirmada"
+                            txt_status_consulta_home.text = getResources().getString(R.string.statusConsultaC)
+                        }else{
+                            txt_status_consulta_home.text = getResources().getString(R.string.statusConsultaCan)
                         }
                         txt_data_home.text = i.consulta?.horario?.horaInico.toString()
 

@@ -8,19 +8,28 @@ import android.widget.Toast
 import com.example.dqv.API.APICaller
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.beans.*
+import com.example.dqv.fragments.novaConsulta
 import com.example.dqv.services.DQV
 import com.example.dqv.services.ServiceBuilder
 import com.example.dqv.services.models.LoginResponse
 import com.example.dqv_front.MenuActivity
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_consultas.*
 import retrofit2.*
 import java.sql.Time
 import java.sql.Timestamp
 
 class MainActivity : AppCompatActivity() {
+    var pessoaPerm: Pessoa? = null
+        get() = pessoaPerm
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         btn_login.setOnClickListener {
 
@@ -53,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                     response?.body()?.let {
                         val pessoa: Pessoa = it
 
+
                         if(pessoa.id == null || pessoa.nome == null){
                             Toast.makeText(applicationContext,R.string.userNotFound, Toast.LENGTH_SHORT).show()
                             return
@@ -60,6 +70,7 @@ class MainActivity : AppCompatActivity() {
 
                         println(pessoa.nome)
                         println(pessoa?.endereco?.logradouro)
+                        pessoaPerm = pessoa
 
                         val intent = Intent(applicationContext,MenuActivity::class.java)
                         startActivity(intent)

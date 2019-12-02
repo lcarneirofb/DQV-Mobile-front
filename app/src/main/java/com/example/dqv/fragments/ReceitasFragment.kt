@@ -53,7 +53,10 @@ class ReceitasFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_receitas, container, false)
+        val layout: View? =  inflater.inflate(R.layout.fragment_receitas, container, false)
+
+
+        return layout
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -119,13 +122,13 @@ class ReceitasFragment : Fragment() {
                     //val dataformato: LocalDate
                     for(i in receitas) {
                             txt_especialidade.text = i.consulta?.especialista?.especialidade?.name
-                            txt_nome_medico.text = "Atendente: " + i.consulta?.especialista?.nome
-                            txt_data_emissao.text = "Emissão: " + i.dataEmissao
-                            txt_validade.text = "Validade: " + i.validade?.capitalize()
-                            txt_posologia.text = "Posologia: " + i.posologia
-                            txt_descricao.text = "Descrição: " + i.descrição
-                            txt_medicamento.text = "Medicamento: " + i.medicamento
-                            txt_prin_ativo.text = "P. Ativo: " + i.principioAtivo
+                            txt_nome_medico.text = getResources().getString(R.string.nomeMedico) + i.consulta?.especialista?.nome
+                            txt_data_emissao.text = getResources().getString(R.string.dtEmissao) + i.dataEmissao
+                            txt_validade.text = getResources().getString(R.string.dtValidade) + i.validade?.capitalize()
+                            txt_posologia.text = getResources().getString(R.string.posologiaRec) + i.posologia
+                            txt_descricao.text = getResources().getString(R.string.descricaoRec) + i.descrição
+                            txt_medicamento.text = getResources().getString(R.string.nomeMedicamento) + i.medicamento
+                            txt_prin_ativo.text = getResources().getString(R.string.prinAtivoRec) + i.principioAtivo
                             if(txt_especialidade.text == "ASSISTENTE_SOCIAL"){
                                 img_recipeTypeIcon.setImageResource(R.drawable.img_socialas)
                             }else if(txt_especialidade.text == "PSICOLOGO"){

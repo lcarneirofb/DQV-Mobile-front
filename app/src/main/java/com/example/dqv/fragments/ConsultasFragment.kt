@@ -1,6 +1,7 @@
 package com.example.dqv.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import android.widget.Toast
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.R
 import com.example.dqv.beans.AgendamentoConsulta
+import com.example.dqv_front.MenuActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_consultas.*
 import retrofit2.Call
@@ -23,14 +25,7 @@ import retrofit2.Response
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [ConsultasFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [ConsultasFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class ConsultasFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -39,26 +34,26 @@ class ConsultasFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-
         getDataAgendamentos()
+
+        /*btn_novaConsulta.setOnClickListener(){
+            val intent = Intent(context, novaConsulta::class.java)
+            startActivity(intent)
+        }
+        */
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_consultas, container, false)
+        var layout: View? = inflater.inflate(R.layout.fragment_consultas, container, false)
+
+        getDataAgendamentos()
+
+        return layout
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -98,9 +93,11 @@ class ConsultasFragment : Fragment() {
                     val agendamentos: List<AgendamentoConsulta> = it
                             for(i in agendamentos) {
                                 txt_especialidade.text = i.consulta?.especialista?.especialidade?.name
-                                txt_nome_medico.text = "Atendente:" + i.consulta?.especialista?.nome
+                                txt_nome_medico.text = getResources().getString(R.string.nomeMedico) + i.consulta?.especialista?.nome
                                 if(i.consulta?.status == true){
-                                    txt_status_consulta.text = "Status: Confirmada"
+                                    txt_status_consulta.text = getResources().getString(R.string.statusConsultaC)
+                                }else{
+                                    txt_status_consulta.text = getResources().getString(R.string.statusConsultaCan)
                                 }
                                 txt_data.text = i.consulta?.horario?.horaInico.toString()
 
