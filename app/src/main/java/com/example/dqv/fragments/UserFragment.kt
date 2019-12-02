@@ -13,6 +13,8 @@ import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.MainActivity
 import com.example.dqv.R
 import com.example.dqv.beans.Pessoa
+import com.example.dqv.repositories.PessoaRepository
+import com.example.dqv_front.MenuActivity
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_user.*
 import retrofit2.Call
@@ -47,7 +49,9 @@ class UserFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        //getDataUser()
+        getDataUser()
+
+
     }
 
     override fun onCreateView(
@@ -56,7 +60,7 @@ class UserFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val layout: View? = inflater.inflate(R.layout.fragment_user, container, false)
-        //getDataUser()
+        getDataUser()
         return layout
     }
 
@@ -112,23 +116,59 @@ class UserFragment : Fragment() {
                 }
             }
     }
-    /*fun getDataUser(){
-        var pessoa = (activity as MainActivity).pessoaPerm
+    fun getDataUser(){
+        val pessoaRepo = PessoaRepository.getInstance()
+        var pessoa = pessoaRepo.retornaPessoa()
 
 
-        txt_nome_user.text = pessoa?.nome
-        txt_cpf_user.text = pessoa?.cpf
-        txt_telefone_user.text = pessoa?.telefone
-        txt_datansc_user.text = pessoa?.dataNascimento.toString()
-        txt_rg_user.text = pessoa?.rg
-        txt_estcivil_user.text = pessoa?.estadoCivil.toString()
-        txt_sexo_user.text = pessoa?.sexo.toString()
-        txt_email_user.text = pessoa?.email
-        txt_logradouro_user.text = pessoa?.endereco?.logradouro
-        txt_cidade_user.text = pessoa?.endereco?.cidade
-        txt_cep_user.text = pessoa?.endereco?.cep
-        txt_numeroend_user.text = pessoa?.endereco?.numero.toString()
-        txt_uf_user.text = pessoa?.endereco?.uf
+        RetrofitInitializer()
+        val call = RetrofitInitializer().pessoaService().getPessoa(pessoa.id!!.toInt())
+        call.enqueue(object: Callback<Pessoa?> {
+            override fun onResponse(call: Call<Pessoa?>, response: Response<Pessoa?>) {
+                response?.body()?.let {
+                    val pessoa: Pessoa = it
 
-    }*/
+                    txt_nome_user.text = pessoa?.nome
+                    txt_cpf_user.text = pessoa?.cpf
+                    txt_telefone_user.text = pessoa?.telefone
+                    txt_datansc_user.text = pessoa?.dataNascimento.toString()
+                    txt_rg_user.text = pessoa?.rg
+                    txt_estcivil_user.text = pessoa?.estadoCivil.toString()
+                    txt_sexo_user.text = pessoa?.sexo.toString()
+                    txt_email_user.text = pessoa?.email
+                    txt_logradouro_user.text = pessoa?.endereco?.logradouro
+                    txt_cidade_user.text = pessoa?.endereco?.cidade
+                    txt_cep_user.text = pessoa?.endereco?.cep
+                    txt_numeroend_user.text = pessoa?.endereco?.numero.toString()
+                    txt_uf_user.text = pessoa?.endereco?.uf
+                }
+            }
+
+            override fun onFailure(call: Call<Pessoa?>, t: Throwable) {
+                Toast.makeText(context,t?.message, Toast.LENGTH_SHORT).show()
+                println(t?.message)
+                Toast.makeText(context, "Algo de errado não está certo, "+
+                        "Estudantes sedentos estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
+//        println(pessoa.nome+"-------------------------------------------------------------")
+//
+//        Thread.sleep(5000)
+//        txt_nome_user.text = pessoa.nome
+//        txt_cpf_user.text = pessoa?.cpf
+//        txt_telefone_user.text = pessoa?.telefone
+//        txt_datansc_user.text = pessoa?.dataNascimento.toString()
+//        txt_rg_user.text = pessoa?.rg
+//        txt_estcivil_user.text = pessoa?.estadoCivil.toString()
+//        txt_sexo_user.text = pessoa?.sexo.toString()
+//        txt_email_user.text = pessoa?.email
+//        txt_logradouro_user.text = pessoa?.endereco?.logradouro
+//        txt_cidade_user.text = pessoa?.endereco?.cidade
+//        txt_cep_user.text = pessoa?.endereco?.cep
+//        txt_numeroend_user.text = pessoa?.endereco?.numero.toString()
+//        txt_uf_user.text = pessoa?.endereco?.uf
+
+    }
 }

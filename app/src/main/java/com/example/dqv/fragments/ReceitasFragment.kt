@@ -55,6 +55,7 @@ class ReceitasFragment : Fragment() {
         // Inflate the layout for this fragment
         val layout: View? =  inflater.inflate(R.layout.fragment_receitas, container, false)
 
+        getDataReceitas()
 
         return layout
     }

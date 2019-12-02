@@ -9,6 +9,7 @@ import com.example.dqv.API.APICaller
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.beans.*
 import com.example.dqv.fragments.novaConsulta
+import com.example.dqv.repositories.PessoaRepository
 import com.example.dqv.services.DQV
 import com.example.dqv.services.ServiceBuilder
 import com.example.dqv.services.models.LoginResponse
@@ -67,10 +68,10 @@ class MainActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext,R.string.userNotFound, Toast.LENGTH_SHORT).show()
                             return
                         }
-
-                        println(pessoa.nome)
-                        println(pessoa?.endereco?.logradouro)
-                        pessoaPerm = pessoa
+                        val pessoaRepo = PessoaRepository.getInstance()
+                        if(pessoaRepo.retornaPessoa()==null){
+                            pessoaRepo.configPessoa(pessoa)
+                        }
 
                         val intent = Intent(applicationContext,MenuActivity::class.java)
                         startActivity(intent)
