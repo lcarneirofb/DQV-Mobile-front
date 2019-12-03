@@ -39,8 +39,6 @@ class ConsultasFragment : Fragment() {
         super.onCreate(savedInstanceState)
         getDataAgendamentos()
 
-
-
     }
 
     override fun onCreateView(
@@ -122,6 +120,10 @@ class ConsultasFragment : Fragment() {
                                     img_consultTypeIcon.setImageResource(R.drawable.img_medico)
                                 }
                             }
+//                            btn_novaConsulta.setOnClickListener{
+//                                val intent = Intent(context,novaConsulta::class.java)
+//                                startActivity(intent)
+//                            }
                 }
             }
 
@@ -133,6 +135,7 @@ class ConsultasFragment : Fragment() {
                 //Toast.makeText(applicationContext, "Algo de errado não está certo, estudantes sedentos "+
                 //        "estão trabalhando para resolver o seu problema, NTI PLS HALP", Toast.LENGTH_SHORT).show()
             }
+
         })
 
     }

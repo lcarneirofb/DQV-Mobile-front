@@ -11,7 +11,10 @@ import android.widget.Toast
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.R
 import com.example.dqv.beans.Receita
+import kotlinx.android.synthetic.main.fragment_consultas.*
 import kotlinx.android.synthetic.main.fragment_receitas.*
+import kotlinx.android.synthetic.main.fragment_receitas.txt_especialidade
+import kotlinx.android.synthetic.main.fragment_receitas.txt_nome_medico
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -142,6 +145,7 @@ class ReceitasFragment : Fragment() {
                                 img_recipeTypeIcon.setImageResource(R.drawable.img_medico)
                             }
                     }
+
                 }
             }
 

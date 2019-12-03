@@ -25,5 +25,9 @@ class RetrofitInitializer {
         return retrofit.create(ReceitaService::class.java)
     }
 
+    fun especialistaService() : EspecialistaService{
+        return retrofit.create(EspecialistaService::class.java)
+    }
+
 
 }
