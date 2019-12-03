@@ -1,8 +1,8 @@
 package com.example.dqv.beans
 
-class PostTipoMedico {
-    var especialidade:Especialistas? = null
-    constructor(especialidade:Especialistas){
-        this.especialidade=especialidade
+class PostTipoMedico{
+    var tipoMedico:TipoMedico? = null
+    constructor(tipoMedico: TipoMedico){
+        this.tipoMedico = tipoMedico
     }
 }

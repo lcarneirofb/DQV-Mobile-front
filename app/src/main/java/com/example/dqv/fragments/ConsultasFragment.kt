@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.dqv.API.RetrofitInitializer
+import com.example.dqv.MainActivity
 import com.example.dqv.R
 import com.example.dqv.beans.AgendamentoConsulta
 import com.example.dqv_front.MenuActivity
@@ -124,6 +125,7 @@ class ConsultasFragment : Fragment() {
 //                                val intent = Intent(context,novaConsulta::class.java)
 //                                startActivity(intent)
 //                            }
+                            
                 }
             }
 

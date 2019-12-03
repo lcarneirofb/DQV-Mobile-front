@@ -29,5 +29,13 @@ class RetrofitInitializer {
         return retrofit.create(EspecialistaService::class.java)
     }
 
+    fun diariaService() : DiariaService{
+        return retrofit.create(DiariaService::class.java)
+    }
+
+    fun horarioService() : HorarioService{
+        return retrofit.create(HorarioService::class.java)
+    }
+
 
 }

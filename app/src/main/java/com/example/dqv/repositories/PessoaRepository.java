@@ -13,7 +13,7 @@ public class PessoaRepository {
         }
         return repo;
     }
-    public PessoaRepository(){
+    private PessoaRepository(){
     }
 
     public Pessoa retornaPessoa(){

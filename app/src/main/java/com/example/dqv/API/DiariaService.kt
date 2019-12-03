@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface DiariaService{
     @GET("diaria/especialista/{id}")
-    fun getDiarias(@Path("id") id: Int): Call<List<Diaria>>
+    fun getDiarias(@Path("id") idEspecialista: Int): Call<List<Diaria>>
 }

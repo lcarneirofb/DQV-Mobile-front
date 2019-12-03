@@ -227,4 +227,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun setOnClickNovaConsul(){
+        btn_novaConsulta.setOnClickListener{
+            val intent = Intent(applicationContext,novaConsulta::class.java)
+            startActivity(intent)
+        }
+    }
 }
