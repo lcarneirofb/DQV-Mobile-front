@@ -50,7 +50,7 @@ class UserFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
         getDataUser()
-
+        
 
     }
 
@@ -153,22 +153,7 @@ class UserFragment : Fragment() {
         })
 
 
-//        println(pessoa.nome+"-------------------------------------------------------------")
-//
-//        Thread.sleep(5000)
-//        txt_nome_user.text = pessoa.nome
-//        txt_cpf_user.text = pessoa?.cpf
-//        txt_telefone_user.text = pessoa?.telefone
-//        txt_datansc_user.text = pessoa?.dataNascimento.toString()
-//        txt_rg_user.text = pessoa?.rg
-//        txt_estcivil_user.text = pessoa?.estadoCivil.toString()
-//        txt_sexo_user.text = pessoa?.sexo.toString()
-//        txt_email_user.text = pessoa?.email
-//        txt_logradouro_user.text = pessoa?.endereco?.logradouro
-//        txt_cidade_user.text = pessoa?.endereco?.cidade
-//        txt_cep_user.text = pessoa?.endereco?.cep
-//        txt_numeroend_user.text = pessoa?.endereco?.numero.toString()
-//        txt_uf_user.text = pessoa?.endereco?.uf
+
 
     }
 }

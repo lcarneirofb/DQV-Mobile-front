@@ -47,6 +47,12 @@
                     android:icon="@drawable/consulta_icon" />
 
                 <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_nova_consulta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/img_medico" />
+
+                <com.google.android.material.tabs.TabItem
                     android:id="@+id/tab_receitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
