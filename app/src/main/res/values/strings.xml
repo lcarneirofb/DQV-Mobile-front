@@ -48,9 +48,33 @@
     <!-- Consulta-->
     <string name="statusConsultaC">Status : Confirmada</string>
     <string name="statusConsultaCan">Status : Cancelada</string>
+
+    <!-- Nova Consulta-->
     <string name="lbl_novaConsulta">Nova Consulta</string>
+    <string name="lbl_spinEspecialidade">Selecione a Especialidade: </string>
+    <string name="lbl_spinTipoMedico">Selecione o tipo de Médico: </string>
+    <string name="lbl_spinMedico">Selecione o Atendente: </string>
+    <string name="lbl_dataPick">Selecione a Data: </string>
+    <string name="lbl_horaPick">Selecione a Hora: </string>
+
+    <!-- Array Spinner Nova Consulta-->
+    <array name="spin_especialidade">
+        <item>Médico</item>
+        <item>Nutricionista</item>
+        <item>Ortodontista</item>
+        <item>Psicólogo</item>
+        <item>Assistente Social</item>
+    </array>
+
+    <!-- Array Spinner Tipo Médico-->
+    <array name="spin_tipoMedico">
+        <item>Cardiologista</item>
+        <item>Ginecologista</item>
+        <item>Médico do Trabalho</item>
+    </array>
 
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

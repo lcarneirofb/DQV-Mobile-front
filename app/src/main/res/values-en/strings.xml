@@ -48,6 +48,30 @@
     <!-- Appointments-->
     <string name="statusConsultaC">Status : Confirmed</string>
     <string name="statusConsultaCan">Status : Canceled</string>
+
+    <!-- New Appointment-->
+
     <string name="lbl_novaConsulta">New Appointment</string>
+    <string name="lbl_spinEspecialidade">Select Physician Specialty:  </string>
+    <string name="lbl_spinTipoMedico">Select Doctor Type: </string>
+    <string name="lbl_spinMedico">Select the attendant: </string>
+    <string name="lbl_dataPick">Select date: </string>
+    <string name="lbl_horaPick">Select time: </string>
+
+    <!-- Array Spinner New Appointment-->
+    <array name="spin_especialidade">
+        <item>Specialist</item>
+        <item>Nutritionist</item>
+        <item>Orthodontist</item>
+        <item>Psychologist</item>
+        <item>Social worker</item>
+    </array>
+
+    <!-- Array Spinner Doctor Type-->
+    <array name="spin_tipoMedico">
+        <item>Cardiologist</item>
+        <item>Gynecologist</item>
+        <item>Labor Doctor</item>
+    </array>
 
 </resources>

@@ -10,17 +10,97 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
 
             <TextView
                 android:id="@+id/lbl_novaConsulta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lbl_novaConsulta"
+                android:background="#9DCE81"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="25dp"/>
+                android:text="@string/lbl_novaConsulta"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_spinEspecialidade"
+                android:textSize="17dp">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinner_especialidadeMedico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/spin_especialidade">
+
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_spinTipoMedico"
+                android:textSize="17dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinner_tipoMedico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/spin_tipoMedico"
+                android:visibility="gone">
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_spinMedico"
+                android:textSize="17dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinner_Medico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_dataPick"
+                android:visibility="gone">
+            </TextView>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </DatePicker>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_horaPick"
+                android:visibility="gone">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinner_hora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            </Spinner>
 
 
         </LinearLayout>
