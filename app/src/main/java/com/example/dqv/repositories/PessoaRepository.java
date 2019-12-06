@@ -24,4 +24,13 @@ public class PessoaRepository {
        this.pessoa=pessoa;
     }
 
+    public String getSenha(){
+        return pessoa.getPass();
+    }
+
+    public void setSenha(String s){
+        pessoa.setPass(s);
+        return;
+    }
+
 }

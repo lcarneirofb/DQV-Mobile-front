@@ -48,14 +48,7 @@ class ConsultasFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var layout: View? = inflater.inflate(R.layout.fragment_consultas, container, false)
-        val activity = activity as Context
-        val btn = view?.findViewById<FloatingActionButton>(btn_novaConsulta.id)
 
-            /*btn.set{
-            println("24")
-            val intent = Intent(context, novaConsulta::class.java)
-            startActivity(intent)
-        }*/
 
         getDataAgendamentos()
 
@@ -120,10 +113,6 @@ class ConsultasFragment : Fragment() {
                                 }else if(txt_especialidade.text == "MEDICO"){
                                     img_consultTypeIcon.setImageResource(R.drawable.img_medico)
                                 }
-                            }
-                            btn_novaConsulta.setOnClickListener{
-                                var intent = Intent(context,novaConsulta::class.java)
-                                startActivity(intent)
                             }
 
                 }

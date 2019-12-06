@@ -28,7 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_spinEspecialidade"
-                android:textSize="17dp">
+                android:textSize="17dp"
+                android:padding="10dp">
 
             </TextView>
 
@@ -36,6 +37,7 @@
                 android:id="@+id/spinner_especialidadeMedico"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#E7DDDD"
                 android:entries="@array/spin_especialidade">
 
             </Spinner>
@@ -45,7 +47,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_spinTipoMedico"
                 android:textSize="17dp"
-                android:visibility="gone">
+                android:padding="10dp">
+                <!--android:visibility="gone"-->
+
 
             </TextView>
 
@@ -53,8 +57,8 @@
                 android:id="@+id/spinner_tipoMedico"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:entries="@array/spin_tipoMedico"
-                android:visibility="gone">
+                android:background="#E7DDDD"
+                android:entries="@array/spin_tipoMedico">
             </Spinner>
 
             <TextView
@@ -62,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_spinMedico"
                 android:textSize="17dp"
-                android:visibility="gone">
+                android:padding="10dp">
+                <!--android:visibility="gone"-->
 
             </TextView>
 
@@ -70,20 +75,24 @@
                 android:id="@+id/spinner_Medico"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone">
+                android:background="#E7DDDD">
+                <!-- pegar entries do GET-->
+                <!--android:visibility="gone"-->
             </Spinner>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_dataPick"
-                android:visibility="gone">
+                android:padding="10dp">
+                <!--android:visibility="gone"-->
             </TextView>
 
             <DatePicker
                 android:id="@+id/datePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#E7DDDD"
                 android:visibility="gone">
 
             </DatePicker>
@@ -92,14 +101,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lbl_horaPick"
-                android:visibility="gone">
+                android:padding="10dp">
+                <!--android:visibility="gone"-->
             </TextView>
 
             <Spinner
                 android:id="@+id/spinner_hora"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone">
+                android:layout_height="match_parent">
+                <!--android:visibility="gone"-->
             </Spinner>
 
 

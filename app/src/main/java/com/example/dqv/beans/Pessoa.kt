@@ -14,15 +14,15 @@ open class Pessoa {
     var telefone: String? = null
     var sexo: Sexo? = null
     var estadoCivil: EstadoCivil? = null
-    var dataNascimento: Timestamp? = null
-    var dataInicio: Timestamp? = null
-    var dataFim: Timestamp? = null
+    var dataNascimento: String? = null
+    var dataInicio: String? = null
+    var dataFim: String? = null
     var coordenador: Boolean? = null
     var endereco: Endereco? = null
 
     constructor(id: Int, email: String, pass: String, nome:String, rg: String, cpf: String, telefone: String,
-                sexo: Sexo, estadoCivil: EstadoCivil, dataNascimento: Timestamp,
-                dataInicio: Timestamp, dataFim: Timestamp, coordenador: Boolean,
+                sexo: Sexo, estadoCivil: EstadoCivil, dataNascimento: String,
+                dataInicio: String, dataFim: String, coordenador: Boolean,
                 endereco: Endereco){
         this.id = id
         this.email = email

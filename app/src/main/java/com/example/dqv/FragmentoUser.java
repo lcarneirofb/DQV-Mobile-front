@@ -17,7 +17,6 @@ import com.example.dqv.fragments.TrocaSenhaFragment;
 import com.example.dqv.fragments.UserFragment;
 import com.example.dqv.repositories.PessoaRepository;
 
-import static com.example.dqv.R.id.btn_mudarsenha_user;
 
 
 /**
@@ -77,7 +76,7 @@ public class FragmentoUser extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_user, container, false);
-        button = rootView.findViewById(R.id.btn_mudarsenha_user);
+        button = rootView.findViewById(R.id.btn_confTrocaSenha);
         this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

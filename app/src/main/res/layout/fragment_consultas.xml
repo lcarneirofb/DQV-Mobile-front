@@ -7,21 +7,19 @@
     tools:context=".fragments.ConsultasFragment">
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_novaConsulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:clickable="true"
-        android:src="@drawable/consulta_icon"
-        app:backgroundTint="#E9E240" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_consultas"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="center">
+
+        </TextView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVConsultas"

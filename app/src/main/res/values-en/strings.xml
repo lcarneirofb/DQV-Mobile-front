@@ -25,6 +25,7 @@
     <string name="descricaoRec">Description : </string>
     <string name="nomeMedicamento">Medication : </string>
     <string name="prinAtivoRec">A. Principle : </string>
+    <string name="txt_receitas">Recipes</string>
 
     <!-- Users-->
     <string name="txt_meuperfil">My profile</string>
@@ -58,6 +59,13 @@
     <string name="lbl_dataPick">Select date: </string>
     <string name="lbl_horaPick">Select time: </string>
 
+    <!-- Password Changing-->
+    <string name="lbl_trocasenha">Password Change</string>
+    <string name="lbl_senhaAtual">Type the actual password: </string>
+    <string name="lbl_novaSenha">Type the new password: </string>
+    <string name="lbl_novaSenhaConf">Confirm the new password: </string>
+    <string name="lbl_confirmarTroca">Confirm </string>
+
     <!-- Array Spinner New Appointment-->
     <array name="spin_especialidade">
         <item>Specialist</item>
@@ -73,5 +81,8 @@
         <item>Gynecologist</item>
         <item>Labor Doctor</item>
     </array>
+
+
+    <string name = "noticia"> Blue November is the subject of an awareness campaign conducted by various entities to draw attention to the integral health of men. More information: http://www.sugep.ufrpe.br/node/1017 </string>
 
 </resources>

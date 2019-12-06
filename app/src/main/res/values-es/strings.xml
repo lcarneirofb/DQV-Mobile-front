@@ -25,6 +25,7 @@
     <string name="descricaoRec">Descripcíon : </string>
     <string name="nomeMedicamento">Medicación : </string>
     <string name="prinAtivoRec">P. Activo : </string>
+    <string name="txt_receitas">Recetas</string>
 
     <!-- Usuarios-->
     <string name="txt_meuperfil">Mi perfil</string>
@@ -58,6 +59,13 @@
     <string name="lbl_dataPick">Seleccionar fecha: </string>
     <string name="lbl_horaPick">Seleccione hora: </string>
 
+    <!-- Password Changing-->
+    <string name="lbl_trocasenha">Cambio de contraseña</string>
+    <string name="lbl_senhaAtual">Escriba la contraseña actual: </string>
+    <string name="lbl_novaSenha">Escribe la nueva contraseña: </string>
+    <string name="lbl_novaSenhaConf">Confirma la nueva contraseña: </string>
+    <string name="lbl_confirmarTroca">Confirmar </string>
+
     <!-- Array Spinner Nueva Consulta-->
     <array name="spin_especialidade">
         <item>Doctor</item>
@@ -74,6 +82,8 @@
         <item>Doctor Laboral</item>
     </array>
 
+
+    <string name = "noticia">Noviembre azul es el tema de una campaña de sensibilización llevada a cabo por varias entidades para llamar la atención sobre la salud integral de los hombres. Más información: http://www.sugep.ufrpe.br/node/1017 </string>
 
 
 

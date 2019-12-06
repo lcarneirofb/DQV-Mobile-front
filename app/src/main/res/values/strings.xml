@@ -24,6 +24,7 @@
     <string name="descricaoRec">Descrição : </string>
     <string name="nomeMedicamento">Medicamento : </string>
     <string name="prinAtivoRec">P. Ativo : </string>
+    <string name="txt_receitas">Receitas</string>
 
 
     <!-- Usuário-->
@@ -57,6 +58,13 @@
     <string name="lbl_dataPick">Selecione a Data: </string>
     <string name="lbl_horaPick">Selecione a Hora: </string>
 
+    <!-- Troca Senha-->
+    <string name="lbl_trocasenha">Troca de Senha</string>
+    <string name="lbl_senhaAtual">Digite a Senha Atual: </string>
+    <string name="lbl_novaSenha">Digite a nova Senha: </string>
+    <string name="lbl_novaSenhaConf">Confirme a nova Senha: </string>
+    <string name="lbl_confirmarTroca">Confirmar </string>
+
     <!-- Array Spinner Nova Consulta-->
     <array name="spin_especialidade">
         <item>Médico</item>
@@ -73,8 +81,7 @@
         <item>Médico do Trabalho</item>
     </array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noticia"> Novembro Azul é tema de uma campanha de conscientização realizada por diversas entidades com a finalidade de chamar atenção para saúde integral do homem. Mais informações: http://www.sugep.ufrpe.br/node/1017</string>
 
 
 </resources>

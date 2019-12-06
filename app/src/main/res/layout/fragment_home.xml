@@ -30,7 +30,8 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/txt_noticias"
-                    app:fontFamily="sans-serif-condensed" />
+                    app:fontFamily="sans-serif-condensed"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
                 <ImageView
                     android:id="@+id/img_noticia_home"
@@ -38,6 +39,13 @@
                     android:layout_height="210dp"
                     android:layout_below="@+id/txt_noticia_home"
                     android:src="@drawable/nov_azul" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noticia"
+                    style="@style/TextAppearance.AppCompat">
+
+                </TextView>
             </LinearLayout>
 
             <LinearLayout
@@ -53,7 +61,8 @@
                     android:text="@string/txt_consultas"
                     app:fontFamily="sans-serif-condensed"
                     android:gravity="center"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_centerHorizontal="true"
+                    style="@style/TextAppearance.AppCompat.Title"/>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardVConsultas_home"

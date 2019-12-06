@@ -73,13 +73,46 @@ class UserFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var layout: View? = inflater.inflate(ARG_PARAM1, container, false)
-        var button : Button? = layout?.findViewById(R.id.btn_mudarsenha_user)
+        var button : Button? = layout?.findViewById(R.id.btn_confTrocaSenha)
         button?.setOnClickListener{
-            println("koroi----------------------------------------------------")
+            val repo : PessoaRepository = PessoaRepository.getInstance()
+            val pessoa = repo.retornaPessoa()
 
-            inflater.inflate(R.layout.fragment_troca_senha, container, false)
-            val menu:MenuActivity = activity as MenuActivity
-            menu.inflateTrocaSenha()
+            if(inpt_senhaAtual_troca.text.toString()!!.equals(pessoa.pass) ){
+                if(inpt_senhaNova_troca.text.isNullOrEmpty() || inpt_senhaNovaConf_troca.text.isNullOrEmpty()
+                ){
+                    Toast.makeText(context, "Digite as senhas, por favor",Toast.LENGTH_SHORT)
+                    return@setOnClickListener
+                }
+                if(inpt_senhaNova_troca.text.toString()!!.equals(inpt_senhaNovaConf_troca.text.toString())){
+                    pessoa.pass = inpt_senhaNova_troca.text.toString()
+                    repo.configPessoa(pessoa)
+                }
+                else{
+                    Toast.makeText(context, "As senhas estão diferentes, por favor, digite corretamente",Toast.LENGTH_SHORT)
+                    return@setOnClickListener
+                }
+            }else{
+                Toast.makeText(context, "A senha atual está errada, digite corretamente por favor",Toast.LENGTH_SHORT)
+                return@setOnClickListener
+            }
+
+
+            val call = RetrofitInitializer().pessoaService().updatePessoa(pessoa)
+            call.enqueue(object: retrofit2.Callback<Pessoa?>{
+                override fun onResponse(call: Call<Pessoa?>,response: Response<Pessoa?>){
+                    response.body()?.let{
+                        val pessoaResponse = it
+                        println("trocou")
+                        Toast.makeText(context, "Troca efetuada com sucesso",Toast.LENGTH_SHORT)
+                    }
+                }
+                override fun onFailure(call: Call<Pessoa?>, t:Throwable){
+                    println("nàotrocou")
+                    Toast.makeText(context, "Não foi possível completar essa troca, tente mais tarde!",Toast.LENGTH_SHORT)
+                }
+            })
+
         }
         getDataUser()
         return layout
