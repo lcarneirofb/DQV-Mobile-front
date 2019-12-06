@@ -1,6 +1,7 @@
 package com.example.dqv
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,6 +9,7 @@ import android.widget.Toast
 import com.example.dqv.API.APICaller
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.beans.*
+import com.example.dqv.fragments.UserFragment
 import com.example.dqv.fragments.novaConsulta
 import com.example.dqv.repositories.PessoaRepository
 import com.example.dqv.services.DQV
@@ -21,7 +23,11 @@ import retrofit2.*
 import java.sql.Time
 import java.sql.Timestamp
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), UserFragment.OnFragmentInteractionListener {
+    override fun onFragmentInteraction(uri: Uri) {
+
+    }
+
     var pessoaPerm: Pessoa? = null
         get() = pessoaPerm
 

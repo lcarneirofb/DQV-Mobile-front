@@ -38,6 +38,14 @@ class MenuActivity : AppCompatActivity() {
 
 
 
+
+    }
+
+    fun inflateTrocaSenha(){
+        println("funcao estatica+++++++++++++++++++++++++++++++")
+        val viewPager = findViewById<View>(R.id.viewPages) as ViewPager
+        viewPager.adapter = PageAdapter(supportFragmentManager,tabLayout.tabCount)
+        viewPager!!.currentItem = 0
     }
 
 

@@ -40,6 +40,7 @@ class ConsultasFragment : Fragment() {
         super.onCreate(savedInstanceState)
         getDataAgendamentos()
 
+
     }
 
     override fun onCreateView(
@@ -55,7 +56,6 @@ class ConsultasFragment : Fragment() {
             val intent = Intent(context, novaConsulta::class.java)
             startActivity(intent)
         }*/
-        println("carai")
 
         getDataAgendamentos()
 
@@ -121,11 +121,11 @@ class ConsultasFragment : Fragment() {
                                     img_consultTypeIcon.setImageResource(R.drawable.img_medico)
                                 }
                             }
-//                            btn_novaConsulta.setOnClickListener{
-//                                val intent = Intent(context,novaConsulta::class.java)
-//                                startActivity(intent)
-//                            }
-                            
+                            btn_novaConsulta.setOnClickListener{
+                                var intent = Intent(context,novaConsulta::class.java)
+                                startActivity(intent)
+                            }
+
                 }
             }
 

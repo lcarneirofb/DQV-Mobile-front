@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.dqv.fragments.ConsultasFragment;
 import com.example.dqv.fragments.HomeFragment;
 import com.example.dqv.fragments.ReceitasFragment;
+import com.example.dqv.fragments.TrocaSenhaFragment;
 import com.example.dqv.fragments.UserFragment;
 import com.example.dqv.fragments.novaConsulta;
 
@@ -36,6 +37,8 @@ public class PageAdapter extends FragmentPagerAdapter {
                 return new ReceitasFragment();
             case 4:
                 return new UserFragment();
+            case 5:
+                return new TrocaSenhaFragment();
             default:
                 return null;
         }

@@ -8,24 +8,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
+import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.example.dqv.API.RetrofitInitializer
 import com.example.dqv.MainActivity
+import com.example.dqv.PageAdapter
 import com.example.dqv.R
 import com.example.dqv.beans.Pessoa
 import com.example.dqv.repositories.PessoaRepository
 import com.example.dqv_front.MenuActivity
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.fragment_user.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
+
+
+
+
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM1 = R.layout.fragment_user
+private const val ARG_PARAM2 = R.layout.fragment_troca_senha
 
 /**
  * A simple [Fragment] subclass.
@@ -45,13 +55,16 @@ class UserFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+
         getDataUser()
 
 
+    }
+
+    fun sendMessage(view: View) {
+
+        // Do something in response to button
     }
 
     override fun onCreateView(
@@ -59,7 +72,15 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val layout: View? = inflater.inflate(R.layout.fragment_user, container, false)
+        var layout: View? = inflater.inflate(ARG_PARAM1, container, false)
+        var button : Button? = layout?.findViewById(R.id.btn_mudarsenha_user)
+        button?.setOnClickListener{
+            println("koroi----------------------------------------------------")
+
+            inflater.inflate(R.layout.fragment_troca_senha, container, false)
+            val menu:MenuActivity = activity as MenuActivity
+            menu.inflateTrocaSenha()
+        }
         getDataUser()
         return layout
     }
@@ -108,11 +129,10 @@ class UserFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             UserFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
                 }
             }
     }
@@ -152,8 +172,7 @@ class UserFragment : Fragment() {
             }
         })
 
-
-
-
     }
+
+
 }
